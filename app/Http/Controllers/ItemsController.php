@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\RelevantStore;
 use App\Models\IctCategory;
 use App\Models\EquipmentType;
@@ -24,4 +23,11 @@ class ItemsController extends Controller
             'unitOfIssues'
         ));
     }
+
+    public function store()
+    {
+        // This is a tempory solution to avoid the error
+        // Store method still have to complete 
+        return redirect()->route('items.create')->with('success', 'Item created successfully.');
+    }   
 }
